@@ -3,7 +3,8 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const { body, validationResult } = require("express-validator");
 const ProductSchema = require("../../../ProductCart/Model/product");
-
+const cors = require('cors');
+router.use(cors());
 router.put("/:id", async (req, res) => {
   try {
     const reqBody = req.body;
