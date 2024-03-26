@@ -2,7 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose"); // Import mongoose module
 const router = express.Router();
 const ProductSchema = require("../../../ProductCart/Model/product");
-
+const cors = require('cors');
+router.use(cors());
 router.get("/:id", async (req, res) => {
   try {
     const reqParams = req.params;

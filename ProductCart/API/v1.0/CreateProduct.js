@@ -2,7 +2,8 @@ const express = require('express')
 const { body, validationResult } = require("express-validator");
 const router = express.Router();
 const ProductSchema = require('../../../ProductCart/Model/product')
-
+const cors = require('cors');
+router.use(cors());
 router.post(
   "/",
   [

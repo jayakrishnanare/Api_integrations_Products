@@ -56,7 +56,9 @@ router.put("/:id", async (req, res) => {
       ) {
         updateDetails.requirements = reqBody.requirements;
       } else {
-        return res.status(400).json({ message: "provide a valid requirements" });
+        return res
+          .status(400)
+          .json({ message: "provide a valid requirements" });
       }
     }
     if (reqBody.hasOwnProperty("category")) {

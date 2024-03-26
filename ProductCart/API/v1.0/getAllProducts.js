@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const ProductSchema = require("../../../ProductCart/Model/product");
+const cors = require('cors');
+router.use(cors());
 router.get("/", async (req, res) => {
   try {
     const getAllProducts = await ProductSchema.find({});

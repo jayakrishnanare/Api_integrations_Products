@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const ProductSchema = require("../../../ProductCart/Model/product");
-
+const cors = require('cors');
+router.use(cors());
 router.delete("/:id", async (req, res) => {
   try {
     const reqParams = req.params;
